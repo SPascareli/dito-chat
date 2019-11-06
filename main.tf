@@ -18,6 +18,8 @@ module "k8s" {
   source   = "./k8s"
   host     = "${module.gke.host}"
 
+  project = "${var.project}"
+
   client_certificate     = "${module.gke.client_certificate}"
   client_key             = "${module.gke.client_key}"
   cluster_ca_certificate = "${module.gke.cluster_ca_certificate}"
